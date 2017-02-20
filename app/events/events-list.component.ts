@@ -98,6 +98,7 @@ events = [
         city: 'Amsterdam',
         country: 'Netherlands'
       },
+      onlineUrl: 'http://ng-nl.org/',
       sessions: [
         {
           id: 1,
@@ -313,6 +314,30 @@ events = [
           Dan Wahlin will show you how you can get started with Angular in 60ish minutes, 
           guaranteed!`,
           voters: ['bradgreen', 'igorminar', 'johnpapa']
+        }
+      ]
+    },
+    {
+      id: 6,
+      name: 'ng-Smagasvegas',
+      date: '10/10/2037',
+      time: '10:00 am',
+      price: 1400.00,
+      imageUrl: '/app/assets/images/ng-vegas.png',
+      onlineUrl: 'http://www.pudding.com',
+      sessions: [
+        {
+          id: 1,
+          name: "Gambling with Angular",
+          presenter: "John Papa",
+          duration: 1,
+          level: "Intermediate",
+          abstract: `No, this talk isn't about slot machines. We all know that 
+          Angular is used in most waiter-bots and coke vending machines, but
+          did you know that was also used to write the core engine in the majority
+          of voting machines? This talk will look at how all presidential elections
+          are now determined by Angular code.`,
+          voters: ['bradgreen', 'igorminar']
         }
       ]
     }
