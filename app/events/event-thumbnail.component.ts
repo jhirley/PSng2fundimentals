@@ -7,6 +7,8 @@ import { Component, Input, Output, EventEmitter} from '@angular/core'
         .thumbnail {min-height: 210px; }
         .pad-left {margin-left: 10px;}
         .well div {color: #bbb; }
+        .green {color: #003300 !important;}
+        .bold {font-weight: bold;}
     `] 
 })
 
@@ -15,6 +17,13 @@ export class EventThumbnailComponent {
  @Input() event: any
  @Output() eventClick = new EventEmitter()
 
-
-
+ getStartTimeClass() {
+    const isEarlyStart = this.event && this.event.time === '8:00 am'
+    return {green: isEarlyStart, bold: isEarlyStart}
+//    if ( this.event && this.event.time === '8:00 am' )
+//        return 'green bold'
+//        return ['green','bold']
+//    return ''
+//    return []
+    }
 }
