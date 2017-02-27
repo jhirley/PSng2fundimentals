@@ -35,7 +35,16 @@ import { appRoutes } from './routes';
         EventService
         ,ToastrService
         ,EventRouteActivator
+        ,{
+            provide: 'canDeactivateCreateEvent'
+            ,useValue: checkDirtyState}
         ],
     bootstrap: [EventsAppComponent]    
 })
 export class AppModule {}
+
+function checkDirtyState(component: CreateEventComponent){
+    if (component.isDirty)
+        return window.confirm('you are a dirty girl!')
+    return true
+}
