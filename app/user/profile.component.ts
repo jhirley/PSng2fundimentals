@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthService } from './auth.service';
 
 @Component({
-  templateUrl: 'app/user/profile.component.html'
+  templateUrl: 'app/user/profile.component.html',
+  styles:[`
+    em {float: right; color: red; padding-left: 10px;}
+    .error input {background-color : #e3c3c5;}
+    .error ::-webkit-input-placeholder {color: #999; }
+    .error ::-moz-placeholder {color: #999; }
+    .error :-moz-input-placeholder {color: #999; }
+    .error :ms-input-placeholder {color: #999; }
+  `]
 })
 export class ProfileComponent implements OnInit{
 
   profileForm : FormGroup
+  private firstName: FormControl
+  private lastName: FormControl
 
   constructor(
     private auth: AuthService,
@@ -17,20 +27,30 @@ export class ProfileComponent implements OnInit{
   ) { }
 
   ngOnInit() {
-    let firstName = new FormControl(this.auth.currentUser.firstName)
-    let lastName = new FormControl(this.auth.currentUser.lastName)
+    this.firstName = new FormControl(this.auth.currentUser.firstName, Validators.required)
+    this.lastName = new FormControl(this.auth.currentUser.lastName, Validators.required)
 
     this.profileForm = new FormGroup({
-      firstName: firstName
-      ,lastName: lastName
+      firstName: this.firstName
+      ,lastName: this.lastName
     })
    }
    saveProfile(formValues){
-      this.auth.updateCurrentUser(formValues.firstName, formValues.lastName)
-      this.router.navigate(['events'])
+      if (this.profileForm.valid){
+        this.auth.updateCurrentUser(formValues.firstName, formValues.lastName)
+        this.router.navigate(['events'])
+      }
    }
     cancel(){
       this.router.navigate(['events'])
-    }       
+    }
+    validateFirstName(){
+      return this.firstName.valid || this.firstName.untouched
+    }
+    validateLastName(){
+      return this.lastName.valid || this.lastName.untouched
+    }
+
+
 }
 
