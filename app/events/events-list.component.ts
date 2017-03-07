@@ -8,7 +8,8 @@ import { ToastrService } from '../common/toastr.service'
 
 @Component({
    // selector: 'events-list',
-    templateUrl: 'app/events/events-list.component.html' 
+    templateUrl: 'app/events/events-list.component.html'
+
 })
 
 export class EventsListComponent implements OnInit {
