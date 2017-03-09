@@ -13,6 +13,7 @@ import {
     ,EventRouteActivator
     ,EventListResolver
     ,CreateSessionComponent
+    ,SessionListComponent
 
  } from './events/index.barrel';
 
@@ -42,6 +43,7 @@ import { appRoutes } from './routes';
         ,CreateEventComponent
         ,Error404Component
         ,CreateSessionComponent
+        ,SessionListComponent
         ],
     providers:[
         EventService
