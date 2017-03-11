@@ -16,6 +16,7 @@ import {
     ,SessionListComponent
 
  } from './events/index.barrel';
+ import { CollapsibleWellComponent } from './common/collapsible-well.component'
 
 import {EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './nav/navbar.component'
@@ -44,6 +45,7 @@ import { appRoutes } from './routes';
         ,Error404Component
         ,CreateSessionComponent
         ,SessionListComponent
+        ,CollapsibleWellComponent
         ],
     providers:[
         EventService
