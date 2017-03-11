@@ -14,6 +14,8 @@ import {
     ,EventListResolver
     ,CreateSessionComponent
     ,SessionListComponent
+    ,durationPipe
+    ,ProperCasePipe
 
  } from './events/index.barrel';
  import { CollapsibleWellComponent } from './common/collapsible-well.component'
@@ -46,6 +48,8 @@ import { appRoutes } from './routes';
         ,CreateSessionComponent
         ,SessionListComponent
         ,CollapsibleWellComponent
+        ,ProperCasePipe
+        ,durationPipe
         ],
     providers:[
         EventService

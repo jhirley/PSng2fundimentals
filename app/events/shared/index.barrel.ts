@@ -3,3 +3,7 @@ export * from './event.service'
 export * from './event.model'
 
 export * from './restricted-words.validator'
+
+export * from './duration.pipe'
+export * from './capitalizefirst.pipe'
+export * from './ProperCase.pipe'
