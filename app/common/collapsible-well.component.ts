@@ -1,5 +1,5 @@
 
-import { Component, Input} from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -7,7 +7,6 @@ import { Component, Input} from '@angular/core';
     templateUrl: 'collapsible-well.component.html'
 })
 export class CollapsibleWellComponent  {
-    @Input() title:string;
     visible: boolean = true;
 
     constructor() { }
