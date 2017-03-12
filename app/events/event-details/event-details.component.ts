@@ -12,12 +12,13 @@ import { EventService } from '../shared/event.service';
     ,styles:[`
     .container { padding-left: 20px; padding-right: 20px; }
     .event-image {height: 100px;}
-    a {cursor: pointer; float: right; padding-left: 10px;}
+    a {cursor: pointer; padding-left: 10px; text-align: right !important;}
     `]
 })
 export class EventDetailsComponent implements OnInit {
     event: IEvent
     addMode:boolean
+    filterBy: string = 'all';
 
     constructor(
         private eventService: EventService
