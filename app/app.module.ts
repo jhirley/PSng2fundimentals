@@ -28,6 +28,7 @@ import { TOASTR_TOKEN
     , Toastr
     ,JQ_TOKEN
     ,CollapsibleWellComponent
+    ,simpleModalComponent
 } from './common/index.barrel'
 
 import { AuthService } from './user/auth.service';
@@ -57,6 +58,7 @@ declare let jQuery : Object;
         ,CollapsibleWellComponent
         ,ProperCasePipe
         ,durationPipe
+        ,simpleModalComponent
         ],
     providers:[
         EventService
@@ -65,6 +67,7 @@ declare let jQuery : Object;
             provide: TOASTR_TOKEN,
             useValue: toastr
         }
+        ,{ provide: JQ_TOKEN, useValue: jQuery }
         ,EventRouteActivator
         ,EventListResolver
         ,AuthService
