@@ -1,11 +1,20 @@
 /* app css stylesheet */
 .hoverwell:hover {
   background-color: #485563;
-  cursor: pointer;
+    cursor: pointer;
+    /*background-color: #0852a1;
+    border: 2px solid red;
+    border-radius: 5px;*/
 }
 
 .container {
   padding-top: 10px;
+  /*background-color : #ffffff ;
+  background-image : url("/app/assets/images/boceto-web.jpg");
+
+  background-repeat: repeat;
+  background-position: top center;
+  background-attachment: fixed;*/
 }
 
 .pointable {
@@ -15,6 +24,10 @@
 button {
   color: #555;
 }
+
+/*button {
+  color: #555;
+}*/
 
 [hidden] {
   display: none !important;
