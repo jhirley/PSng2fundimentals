@@ -29,6 +29,7 @@ import { TOASTR_TOKEN
     ,JQ_TOKEN
     ,CollapsibleWellComponent
     ,simpleModalComponent
+    ,ModalTriggerDirective
 } from './common/index.barrel'
 
 import { AuthService } from './user/auth.service';
@@ -59,6 +60,9 @@ declare let jQuery : Object;
         ,ProperCasePipe
         ,durationPipe
         ,simpleModalComponent
+
+        ,ModalTriggerDirective
+        
         ],
     providers:[
         EventService
