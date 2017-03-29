@@ -8,14 +8,16 @@ import {
     ,EventThumbnailComponent
     ,EventDetailsComponent
     ,CreateEventComponent
-
-    ,EventService
     ,EventRouteActivator
     ,EventListResolver
     ,CreateSessionComponent
     ,SessionListComponent
     ,durationPipe
     ,ProperCasePipe
+    ,UpvoteComponent
+
+    ,EventService
+    ,VoterService
 
  } from './events/index.barrel';
 
@@ -60,12 +62,13 @@ declare let jQuery : Object;
         ,ProperCasePipe
         ,durationPipe
         ,simpleModalComponent
-
         ,ModalTriggerDirective
+        ,UpvoteComponent
         
         ],
     providers:[
         EventService
+        ,VoterService
         // ,ToastrService
         ,{
             provide: TOASTR_TOKEN,
