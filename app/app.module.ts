@@ -19,6 +19,8 @@ import {
     ,EventService
     ,VoterService
 
+    ,LocationValidatorDirective
+
  } from './events/index.barrel';
 
 import {EventsAppComponent } from './events-app.component'
@@ -64,7 +66,7 @@ declare let jQuery : Object;
         ,simpleModalComponent
         ,ModalTriggerDirective
         ,UpvoteComponent
-        
+        ,LocationValidatorDirective
         ],
     providers:[
         EventService

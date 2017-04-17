@@ -3,6 +3,7 @@ export * from './event-thumbnail.component'
 export * from './events-list.component'
 
 export * from './events-list-resolver.service'
+export * from './location-validator.directive'
 
 export * from './shared/index.barrel'
 export * from './event-details/index.barrel'
